@@ -4,11 +4,11 @@ function grades (a){
 
     if (typeof a ==='number'){
      
-        if(a == 100) {
+        if(a === 100) {
             console.log("Perfect Score");
         }else if (a >=70 && a <100 ){
             console.log("Passed"); 
-        }else if (a < 70 && a >0){
+        }else if (a < 70 && a >=0){
             console.log("Failed");
         }else if (a < 0){
              console.log("Invalid grade");
@@ -25,11 +25,14 @@ grades(-10);
 
 function evenOrOdd (n){
        
-    if (n % 2 == 0){ 
+    if (n % 2 === 0){ 
         console.log("The number: ", + n, " is even")
-    }else{ 
+    } else if (n % 2 === 1){ 
         console.log("The number: ", + n, " is odd");
-    } 
+    } else {
+        console.log("invalid number");
+
+    }
 }
 
 console.log("________Exercise Nº 2");
@@ -45,7 +48,7 @@ function posNeg (n1){
         }else if (n1 < 0){
             console.log("Negative");
         }else if (n1 === 0){
-            console.log(n1);
+            console.log("Zero");
         }
     }else{
         console.log("Invalid number");
